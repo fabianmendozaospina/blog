@@ -236,6 +236,11 @@ body {
     cursor: pointer;
     padding-left: 10px;
     padding-right: 10px;
+    transition: all 300ms;
+}
+
+.card:hover {
+    background: #000;
 }
 
 .card:last:child {
@@ -250,6 +255,22 @@ body {
     line-height: 110px;
     text-align: center;
     margin: 0px auto;
+    transition: all 300ms;
+}
+
+.card:hover .icon {
+    font-size: 70px;
+    color: #37bcf9;
+    animation: showIcon 300ms linear;
+}
+
+@keyframes showIcon {
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0%);
+    }    
 }
 
 .card .category {
@@ -260,6 +281,23 @@ body {
     font-weight: bold;
     text-align: center;
     color: #00538c;
+    transition: all 300ms;
+}
+
+.card:hover .category {
+    color: #fff;
+    animation: showCategory 400ms linear;
+}
+
+@keyframes showCategory {
+    from {
+        transform: translateY(-300%);
+        color: #000;
+    }
+    to {
+        transform: translateY(0%);
+        color: #fff;        
+    }
 }
 
 .card .description {
@@ -268,6 +306,22 @@ body {
     color: #0370b9;
     font-size: 15px;
     margin: 20px;
+    transition: all 300ms;
+}
+
+.card:hover .description {
+    color: #fff;
+    animation: showDescription 400ms linear;
+}
+
+@keyframes showDescription {
+    from {
+        transform: translateX(-300%);
+        color: #000;
+    }
+    to {
+        transform: translateX(0%);
+    }    
 }
 
 /*--- Lateral bar ---*/
